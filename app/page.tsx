@@ -71,6 +71,16 @@ const coreServices = [
     description: 'FORTIS OS, IKENGA AI, UJRIS - Digital integration for institutions',
     icon: '📱',
   },
+  {
+    name: 'Smart Livestock',
+    description: 'Indigenous breeds, BSFL insect farming, aquaculture - coming soon',
+    icon: '🐄',
+  },
+  {
+    name: 'Smart Agriculture',
+    description: 'Regenerative farming, OMF, cover crops - coming soon',
+    icon: '🌱',
+  },
 ];
 
 export default function Home() {
@@ -180,6 +190,180 @@ export default function Home() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Smart Livestock & Circular Feed — Coming Soon */}
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-white">
+        <div className="container-s max-w-6xl">
+          <div className="text-center mb-12">
+            <span className="text-amber-600 text-sm font-semibold tracking-wider uppercase">Coming Soon</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-fortis-dark mt-2 mb-4">
+              🐄 Smart Livestock & Circular Feed Initiative
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Indigenous breeds + Black Soldier Fly larvae + Aquaculture — a formidable answer to food security
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Indigenous Breeds */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
+              <div className="text-5xl mb-4">🐃</div>
+              <h3 className="text-xl font-bold mb-2">Indigenous Breeds</h3>
+              <p className="text-gray-600">N'Dama, WAD goats, Djallonké sheep, guinea fowl — trypanotolerant, heat-resilient</p>
+            </div>
+            {/* BSFL Insect Farming */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
+              <div className="text-5xl mb-4">🪲</div>
+              <h3 className="text-xl font-bold mb-2">BSFL Protein Feed</h3>
+              <p className="text-gray-600">Waste-to-protein conversion — 40-50% crude protein, 30-50% cost reduction</p>
+            </div>
+            {/* Aquaculture Integration */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
+              <div className="text-5xl mb-4">🐟</div>
+              <h3 className="text-xl font-bold mb-2">Aquaculture</h3>
+              <p className="text-gray-600">Tilapia & catfish with rice-fish systems — closing nutrient loops</p>
+            </div>
+          </div>
+
+          {/* Investment Case */}
+          <div className="mt-12 bg-amber-50 rounded-2xl p-8 border border-amber-200">
+            <h3 className="text-xl font-bold text-center mb-4">📊 The Investment Case</h3>
+            <div className="grid md:grid-cols-4 gap-4 text-center">
+              <div><p className="text-2xl font-bold text-fortis-green">$10M+</p><p className="text-sm">Annual Meat Import Gap</p></div>
+              <div><p className="text-2xl font-bold text-fortis-green">30-50%</p><p className="text-sm">Feed Cost Reduction</p></div>
+              <div><p className="text-2xl font-bold text-fortis-green">2.0-4.0x</p><p className="text-sm">BCR in Integrated Systems</p></div>
+              <div><p className="text-2xl font-bold text-fortis-green">70%</p><p className="text-sm">Waste Volume Reduction</p></div>
+            </div>
+          </div>
+
+          {/* Partnership CTA */}
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-4">Interested in investing, supplying technology, or partnering?</p>
+            <Link href="/contact" className="inline-block px-8 py-3 bg-fortis-green text-white rounded-xl font-bold hover:bg-fortis-dark transition">
+              Express Interest →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Smart Agriculture — Coming Soon */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-white">
+        <div className="container-s max-w-6xl">
+          <div className="text-center mb-12">
+            <span className="text-green-600 text-sm font-semibold tracking-wider uppercase">Coming Soon</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-fortis-dark mt-2 mb-4">
+              🌱 Fortis Smart Agriculture
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Regenerative agriculture — soil rejuvenation, indigenous crops, and circular finance for food security
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Agrii-Fortis OMF */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
+              <div className="text-5xl mb-4">🦠</div>
+              <h3 className="text-xl font-bold mb-2">Agrii-Fortis OMF</h3>
+              <p className="text-gray-600">Organo-mineral fertiliser + biochar — restores soil biology, reduces synthetic N by 80%</p>
+            </div>
+            {/* Indigenous Super-Crops */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
+              <div className="text-5xl mb-4">🌾</div>
+              <h3 className="text-xl font-bold mb-2">Indigenous Super-Crops</h3>
+              <p className="text-gray-600">Faidherbia, Mucuna, pigeon pea, sorghum, millet — climate-resilient, nitrogen-fixing</p>
+            </div>
+            {/* Fortis Mobile Money */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
+              <div className="text-5xl mb-4">💰</div>
+              <h3 className="text-xl font-bold mb-2">Circular Finance</h3>
+              <p className="text-gray-600">Mobile payments, micro-loans, marketplace for regenerative products</p>
+            </div>
+          </div>
+
+          {/* African Focused Species */}
+          <div className="mt-8 pt-8 border-t-2 border-dashed border-green-200">
+            <h3 className="text-xl font-bold text-green-800 mb-4 flex items-center gap-2">
+              <span className="text-2xl">🌵</span> African Focused Species — High-Value Long-Term Crops
+            </h3>
+            <div className="grid md:grid-cols-4 gap-4 mb-4">
+              <div className="bg-white rounded-xl p-3 text-center">
+                <div className="text-3xl mb-2">🌵</div>
+                <p className="font-bold text-sm">Prickly Pear</p>
+                <p className="text-xs text-gray-500">Drought-proof, fruit, biofuel</p>
+                <p className="text-xs text-green-600 mt-1">Harvest: 2-3 years</p>
+              </div>
+              <div className="bg-white rounded-xl p-3 text-center">
+                <div className="text-3xl mb-2">🌴</div>
+                <p className="font-bold text-sm">Date Palm</p>
+                <p className="text-xs text-gray-500">Dates, wood, thatch</p>
+                <p className="text-xs text-green-600 mt-1">Harvest: 4-5 years</p>
+              </div>
+              <div className="bg-white rounded-xl p-3 text-center">
+                <div className="text-3xl mb-2">🌳</div>
+                <p className="font-bold text-sm">Baobab</p>
+                <p className="text-xs text-gray-500">Superfood, oil, fibre</p>
+                <p className="text-xs text-green-600 mt-1">Export premium</p>
+              </div>
+              <div className="bg-white rounded-xl p-3 text-center">
+                <div className="text-3xl mb-2">🥜</div>
+                <p className="font-bold text-sm">Shea</p>
+                <p className="text-xs text-gray-500">Shea butter, feed</p>
+                <p className="text-xs text-green-600 mt-1">Harvest: 10-15 years</p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-4 gap-4 mb-4">
+              <div className="bg-white rounded-xl p-3 text-center">
+                <div className="text-3xl mb-2">🌿</div>
+                <p className="font-bold text-sm">Gum Arabic</p>
+                <p className="text-xs text-gray-500">Acacia senegal</p>
+                <p className="text-xs text-green-600 mt-1">Strategic commodity</p>
+              </div>
+              <div className="bg-white rounded-xl p-3 text-center">
+                <div className="text-3xl mb-2">🪔</div>
+                <p className="font-bold text-sm">Oil Palm</p>
+                <p className="text-xs text-gray-500">Palm oil, biodiesel</p>
+                <p className="text-xs text-green-600 mt-1">Harvest: 3-4 years</p>
+              </div>
+              <div className="bg-white rounded-xl p-3 text-center">
+                <div className="text-3xl mb-2">🌿</div>
+                <p className="font-bold text-sm">Moringa</p>
+                <p className="text-xs text-gray-500">Leaf powder, oil</p>
+                <p className="text-xs text-green-600 mt-1">Harvest: 6-8 months</p>
+              </div>
+              <div className="bg-white rounded-xl p-3 text-center">
+                <div className="text-3xl mb-2">🍋</div>
+                <p className="font-bold text-sm">Tamarind</p>
+                <p className="text-xs text-gray-500">Fruit pulp, seeds</p>
+                <p className="text-xs text-green-600 mt-1">Harvest: 6-8 years</p>
+              </div>
+            </div>
+            <div className="mt-4 p-3 bg-green-50 rounded-lg text-center">
+              <p className="text-sm text-green-800">
+                <strong>Investment Case:</strong> Cactus and succulents for drylands • Date palms for coastal regions • Baobab and shea for export markets
+              </p>
+            </div>
+          </div>
+
+          {/* Profit Case */}
+          <div className="mt-12 bg-green-50 rounded-2xl p-8 border border-green-200">
+            <h3 className="text-xl font-bold text-center mb-4">📊 The Profit Case</h3>
+            <div className="grid md:grid-cols-4 gap-4 text-center">
+              <div><p className="text-2xl font-bold text-fortis-green">+155%</p><p className="text-sm">Profit Advantage (3yr)</p></div>
+              <div><p className="text-2xl font-bold text-fortis-green">80%</p><p className="text-sm">Synthetic Fertilizer Reduction</p></div>
+              <div><p className="text-2xl font-bold text-fortis-green">2-5t</p><p className="text-sm">Carbon Sequestered/ha/yr</p></div>
+              <div><p className="text-2xl font-bold text-fortis-green">70%+</p><p className="text-sm">Rice Import Replacement</p></div>
+            </div>
+          </div>
+
+          {/* Partnership CTA */}
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-4">Interested in regenerative agriculture or carbon credits?</p>
+            <Link href="/contact" className="inline-block px-8 py-3 bg-fortis-green text-white rounded-xl font-bold hover:bg-fortis-dark transition">
+              Express Interest →
+            </Link>
           </div>
         </div>
       </section>
