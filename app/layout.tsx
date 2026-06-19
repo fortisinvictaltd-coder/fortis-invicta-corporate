@@ -1,12 +1,12 @@
-import './globals.css';
 import type { Metadata } from 'next';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
+import { Inter } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'FORTIS INVICTA LTD | Building The Gambia\'s Sustainable Future',
-  description: 'Integrated circular economy, digital infrastructure, and sustainable development solutions for The Gambia. Built for The Gambia. Designed for the world.',
+  title: 'Fortis Invicta Ltd - Regenerative Infrastructure in The Gambia',
+  description: 'Corporate website for The Gambia\'s regenerative infrastructure company.',
 };
 
 export default function RootLayout({
@@ -16,12 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

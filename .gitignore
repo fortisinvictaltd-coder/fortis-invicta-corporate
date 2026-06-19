@@ -14,3 +14,7 @@ node_modules/
 .next/ 
 .env.local 
 .vercel 
+.env*
+
+# Local Netlify folder
+.netlify
