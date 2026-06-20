@@ -1,6 +1,20 @@
 ﻿import Link from 'next/link';
+import SocialButtons from './SocialButtons';
 
 export default function Footer() {
+  const quickLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'Eco-Tech', href: '/eco-tech' },
+    { name: 'Circular Hub', href: '/circular-hub' },
+    { name: 'Partners', href: '/partners/map' },
+    { name: 'Airport', href: '/airport' },
+    { name: 'FORTIS OS', href: '/fortis-os' },
+    { name: 'Housing', href: '/housing' },
+    { name: 'Solar', href: '/solar' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
   return (
     <footer className="bg-gray-900 text-white mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -8,16 +22,21 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold text-green-400">FORTIS INVICTA</h3>
             <p className="text-gray-400 text-sm mt-4">Powering The Gambia's Future</p>
+            <div className="mt-4">
+              <SocialButtons variant="icon" size="sm" />
+            </div>
           </div>
 
           <div>
             <h4 className="font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li><Link href="/"><span className="hover:text-white transition cursor-pointer">Home</span></Link></li>
-              <li><Link href="/about"><span className="hover:text-white transition cursor-pointer">About</span></Link></li>
-              <li><Link href="/projects"><span className="hover:text-white transition cursor-pointer">Projects</span></Link></li>
-              <li><Link href="/gallery"><span className="hover:text-white transition cursor-pointer">Gallery</span></Link></li>
-              <li><Link href="/contact"><span className="hover:text-white transition cursor-pointer">Contact</span></Link></li>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-gray-400 text-sm">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="hover:text-white transition cursor-pointer">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

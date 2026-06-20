@@ -27,8 +27,18 @@ export default function Home() {
       <div className="flex items-center justify-center min-h-[calc(100vh-80px)] px-4">
         <div className="text-center max-w-4xl mx-auto">
           <div className="flex justify-center mb-8">
-            <div className="w-24 h-24 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center shadow-2xl">
-              <span className="text-white font-bold text-4xl">FI</span>
+            <div className="relative h-44 w-44 sm:h-52 sm:w-52">
+              <div className="absolute inset-0 translate-x-3 translate-y-4 rounded-[2rem] bg-black/25 blur-2xl"></div>
+              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_28px_70px_rgba(0,0,0,0.35)]"></div>
+              <div className="absolute inset-2 rounded-[1.6rem] border border-white/35 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.5),_rgba(255,255,255,0.08)_35%,_transparent_70%)]"></div>
+              <div className="absolute -right-3 top-6 h-28 w-28 rounded-full border border-white/20 bg-white/5"></div>
+              <div className="absolute left-5 right-5 bottom-3 h-6 rounded-full bg-black/25 blur-md"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center rounded-[2rem] text-white">
+                <span className="text-5xl sm:text-6xl font-black tracking-[0.2em] drop-shadow-lg">FI</span>
+                <span className="mt-2 text-[0.6rem] sm:text-[0.7rem] font-semibold tracking-[0.45em] text-white/90 text-center px-4">
+                  FORTIS INVICTA
+                </span>
+              </div>
             </div>
           </div>
 
