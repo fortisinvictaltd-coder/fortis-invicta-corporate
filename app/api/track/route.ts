@@ -1,9 +1,15 @@
-import { supabaseAdmin } from '@/lib/supabase/client';
+import { createAdminSupabaseClient } from '@/lib/supabase/client';
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   try {
     const data = await req.json();
+
+    const supabaseAdmin = createAdminSupabaseClient();
+
+    if (!supabaseAdmin) {
+      return NextResponse.json({ success: true, stored: false });
+    }
 
     const { error } = await supabaseAdmin.from('visitors').insert([
       {

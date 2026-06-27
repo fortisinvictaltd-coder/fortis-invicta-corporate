@@ -1,0 +1,28 @@
+[33mcommit 300020523cc77aeccdcffbb845cd3c29b39921ba[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Onyedika Michael Ojiaku <onypika@gmail.com>
+Date:   Sat Jun 20 12:22:57 2026 +0100
+
+    feat: Add Super Admin Dashboard with real-time analytics, social integration, and visitor tracking
+    
+    ## What's New:
+    - 🔐 Supabase Integration: Client/server helpers, real-time subscriptions
+    - 👁️ Visitor Tracking: Session-based tracking with device/location data
+    - 📊 Live Dashboard: Real-time visitor counter, charts, analytics
+    - 📱 Social Integration: Social buttons with live metrics (Facebook, Instagram, X, YouTube, LinkedIn)
+    - 📈 GA4 Integration: Google Analytics 4 data pipeline (scaffolded)
+    - 📰 Activity Feed: Public page showing recent visitor activity
+    - 🛡️ Admin Auth: Middleware protection for admin routes
+    - 🎨 Social Components: SocialButtons, SocialShare, SocialFeed
+    
+    ## Files Added:
+    - lib/supabase/client.ts, server.ts
+    - lib/tracker.ts, social-config.ts
+    - components/VisitorTracker.tsx, SocialButtons.tsx, SocialShare.tsx, SocialFeed.tsx
+    - app/activity/page.tsx
+    - app/api/track/, visitors/, social/, ga4/
+    - middleware.ts
+    - supabase/super-admin-schema.sql
+    
+    ## Dependencies:
+    - @supabase/ssr
+    - react-icons

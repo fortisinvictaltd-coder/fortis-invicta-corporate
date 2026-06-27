@@ -1,13 +1,48 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+function getSupabaseUrl() {
+  return process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() ?? '';
+}
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+function getSupabaseAnonKey() {
+  return process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim() ?? '';
+}
 
-export const supabaseAdmin = createClient(supabaseUrl, process.env.SUPABASE_SERVICE_ROLE_KEY!, {
-  auth: {
-    autoRefreshToken: false,
-    persistSession: false,
-  },
-});
+function getSupabaseServiceRoleKey() {
+  return process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ?? '';
+}
+
+function hasValidHttpUrl(value: string) {
+  return /^https?:\/\//i.test(value);
+}
+
+export function createBrowserSupabaseClient(): SupabaseClient | null {
+  const supabaseUrl = getSupabaseUrl();
+  const supabaseAnonKey = getSupabaseAnonKey();
+
+  if (!hasValidHttpUrl(supabaseUrl) || !supabaseAnonKey) {
+    return null;
+  }
+
+  return createClient(supabaseUrl, supabaseAnonKey);
+}
+
+export function createAdminSupabaseClient(): SupabaseClient | null {
+  const supabaseUrl = getSupabaseUrl();
+  const supabaseServiceRoleKey = getSupabaseServiceRoleKey();
+
+  if (!hasValidHttpUrl(supabaseUrl) || !supabaseServiceRoleKey) {
+    return null;
+  }
+
+  return createClient(supabaseUrl, supabaseServiceRoleKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false,
+    },
+  });
+}
+
+export function isSupabaseConfigured() {
+  return hasValidHttpUrl(getSupabaseUrl()) && Boolean(getSupabaseAnonKey());
+}

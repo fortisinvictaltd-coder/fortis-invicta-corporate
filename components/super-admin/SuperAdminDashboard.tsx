@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { Activity, Bot, Globe2, RefreshCw, ShieldCheck, Users, Zap } from 'lucide-react';
-import { createBrowserSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
+import { createBrowserSupabaseClient, isSupabaseConfigured } from '@/lib/supabase/client';
 import type { ActivityFeedItem, SuperAdminDashboardData } from '@/lib/super-admin-types';
 import MetricCard from './MetricCard';
 import ChartsPanel from './ChartsPanel';
@@ -252,7 +252,7 @@ export default function SuperAdminDashboard() {
           <MetricCard title="Active Users" value={formatNumber(data.summary.activeUsers)} subtitle="last 5 minutes" icon={Users} />
           <MetricCard title="Daily Visitors" value={formatNumber(data.summary.dailyVisitors)} subtitle="rolling 24 hours" icon={Globe2} accent="from-sky-500 to-blue-600" />
           <MetricCard title="Social Reach" value={formatNumber(data.summary.socialReach)} subtitle="followers and impressions" icon={Activity} accent="from-fuchsia-500 to-pink-600" />
-          <MetricCard title="FORTISOS Users" value={formatNumber(data.summary.fortisOSUsers)} subtitle="platform engagement" icon={Bot} accent="from-amber-500 to-orange-600" />
+          <MetricCard title="FORTISOS Users" value={formatNumber(data.summary.fortisosUsers)} subtitle="platform engagement" icon={Bot} accent="from-amber-500 to-orange-600" />
           <MetricCard title="Weekly Visitors" value={formatNumber(data.summary.weeklyVisitors)} subtitle="last 7 days" icon={Zap} accent="from-cyan-500 to-teal-600" />
           <MetricCard title="Monthly Visitors" value={formatNumber(data.summary.monthlyVisitors)} subtitle="last 30 days" icon={Globe2} accent="from-emerald-500 to-lime-600" />
           <MetricCard title="API Usage" value={formatNumber(data.summary.apiUsage)} subtitle="FORTISOS calls & events" icon={ShieldCheck} accent="from-slate-500 to-slate-700" />
@@ -389,7 +389,7 @@ export default function SuperAdminDashboard() {
             <div className="mt-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-5 text-white">
               <p className="text-xs uppercase tracking-[0.24em] text-slate-300">Realtime note</p>
               <p className="mt-2 text-sm text-slate-200">
-                {isSupabaseConfigured
+                {isSupabaseConfigured()
                   ? 'Supabase subscriptions are active. Any insert into the visitors, social_metrics, fortisos_analytics, or engagement_events tables will refresh this dashboard.'
                   : 'Supabase environment variables are missing. The dashboard is showing its fallback dataset until .env.local is configured.'}
               </p>

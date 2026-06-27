@@ -49,6 +49,7 @@ export default function SocialButtons({ variant = 'icon', size = 'md', className
     <div className={`flex flex-wrap gap-3 ${className}`}>
       {platforms.map(({ key, icon: Icon, label }) => {
         const config = SOCIAL_CONFIG[key];
+        const textLabel = 'handle' in config ? config.handle : config.number;
 
         return (
           <a
@@ -62,7 +63,7 @@ export default function SocialButtons({ variant = 'icon', size = 'md', className
           >
             <Icon size={iconSizes[size]} />
             {variant === 'full' && <span className="text-sm font-medium">{label}</span>}
-            {variant === 'text' && <span className="ml-1 text-sm font-medium">{config.handle}</span>}
+            {variant === 'text' && <span className="ml-1 text-sm font-medium">{textLabel}</span>}
             {showCounts && <span className="sr-only">Live count unavailable</span>}
           </a>
         );

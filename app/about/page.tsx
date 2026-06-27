@@ -77,6 +77,10 @@ export default function About() {
                   <td className="px-6 py-4">The Gambia</td>
                 </tr>
                 <tr className="border-b">
+                  <td className="px-6 py-4 font-medium bg-gray-50">Incorporated</td>
+                  <td className="px-6 py-4">Incorporated in The Gambia · Est. 2025</td>
+                </tr>
+                <tr className="border-b">
                   <td className="px-6 py-4 font-medium bg-gray-50">CEO</td>
                   <td className="px-6 py-4">Cadjatu Djaló</td>
                 </tr>
